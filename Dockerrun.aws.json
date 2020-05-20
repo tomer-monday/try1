@@ -1,0 +1,36 @@
+{
+   "AWSEBDockerrunVersion:": 2,
+   "contanerDefinitions": [
+       {
+           "name": "client",
+           "image": "tomerdocker1/multi-client",
+           "hostname": "client",
+           "essential": false
+       },
+       {
+            "name": "server",
+            "image": "tomerdocker1/multi-server",
+            "hostname": "api",
+            "essential": false
+        },
+        {
+            "name": "worker",
+            "image": "tomerdocker1/multi-worker",
+            "hostname": "worker",
+            "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "tomerdocker1/nginx",
+            "essential":true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": ["client", "server"]
+        }
+
+   ]
+}

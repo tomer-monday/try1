@@ -1,6 +1,6 @@
 {
    "AWSEBDockerrunVersion": 2,
-   "contanerDefinitions": [
+   "containerDefinitions": [
        {
            "name": "client",
            "image": "tomerdocker1/multi-client",
@@ -14,7 +14,6 @@
             "hostname": "api",
             "essential": false,
             "memory": 128
-
         },
         {
             "name": "worker",
@@ -22,7 +21,6 @@
             "hostname": "worker",
             "essential": false,
             "memory": 128
-
         },
         {
             "name": "nginx",

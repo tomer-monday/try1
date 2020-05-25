@@ -24,7 +24,7 @@
         },
         {
             "name": "nginx",
-            "image": "tomerdocker1/nginx",
+            "image": "tomerdocker1/multi-nginx",
             "essential":true,
             "portMappings": [
                 {
